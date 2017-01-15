@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RNS-NE-eCF">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,34 +19,46 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-lc-HWj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-46-5T3">
-                                <rect key="frame" x="27" y="133" width="320" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-46-5T3">
+                                <rect key="frame" x="23" y="133" width="273" height="67"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="itA-hU-oKm">
-                                <rect key="frame" x="27" y="200" width="320" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="itA-hU-oKm">
+                                <rect key="frame" x="23" y="200" width="273" height="240"/>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.94901960784313721" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="ysl-fW-9v5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebS-rs-FUR">
-                                <rect key="frame" x="27" y="441" width="320" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebS-rs-FUR">
+                                <rect key="frame" x="23" y="441" width="273" height="38"/>
                                 <state key="normal" backgroundImage="botao_salvar"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="0CY-Dj-bNe"/>
+                            <constraint firstItem="ebS-rs-FUR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Wx-WG-fh5"/>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Za-os-5PB"/>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="leading" secondItem="itA-hU-oKm" secondAttribute="leading" id="8Zh-Ht-feL"/>
+                            <constraint firstItem="itA-hU-oKm" firstAttribute="top" secondItem="5bN-46-5T3" secondAttribute="bottom" id="DnK-SU-EsS"/>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="E6W-TR-Z3z"/>
                             <constraint firstAttribute="trailing" secondItem="fLH-lc-HWj" secondAttribute="trailing" id="IWJ-fs-axo"/>
                             <constraint firstItem="fLH-lc-HWj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MjD-DT-0K0"/>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="trailing" secondItem="ebS-rs-FUR" secondAttribute="trailing" id="T7V-lK-g1L"/>
+                            <constraint firstItem="ebS-rs-FUR" firstAttribute="top" secondItem="itA-hU-oKm" secondAttribute="bottom" constant="1" id="U3I-VI-tcr"/>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="leading" secondItem="ebS-rs-FUR" secondAttribute="leading" id="Xn7-Rn-Pfa"/>
+                            <constraint firstItem="5bN-46-5T3" firstAttribute="trailing" secondItem="itA-hU-oKm" secondAttribute="trailing" id="aCg-9i-lTw"/>
                             <constraint firstItem="fLH-lc-HWj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cHN-c8-pio"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5bN-46-5T3" secondAttribute="trailing" constant="8" id="nNg-9f-Pkh"/>
+                            <constraint firstItem="itA-hU-oKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uH4-dw-EM0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fLH-lc-HWj" secondAttribute="bottom" id="zcJ-rf-afS"/>
                         </constraints>
                     </view>
