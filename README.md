@@ -1,2 +1,1 @@
-# minhas-anotacoes-app
-App para fazer anotações. Curso www.udemy.com/curso-completo-do-desenvolvedor-ios-10
+![alt tag](https://raw.githubusercontent.com/nubioknupp/minhas-anotacoes-app/master/Screenshots/Home.png "Screenshot da tela do Aplicativo")
